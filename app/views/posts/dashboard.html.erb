@@ -1,2 +1,28 @@
-<h1>Posts#dashboard</h1>
-<p>Find me in app/views/posts/dashboard.html.erb</p>
+<div class="container my-4"> 
+<h1>Login Form</h1>
+</div>
+<div class="container my-5">
+
+    <%= form_with(model: @post, local: true, id: 'create_posts') do |f| %>
+
+    <div class="form-group">
+        <%= f.label :Title %> 
+        <%= f.text_field :title, class: 'form-control'%>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :Content, "Content" %> 
+        <%= f.text_area :content, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :Image %> 
+        <%= f.text_field :image_url, class: 'form-control' %>
+    </div>
+
+    <hr>
+
+    <%= f.submit "Submit", class: 'btn btn-primary' %>
+<% end %>
+
+</div>
